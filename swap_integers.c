@@ -5,12 +5,11 @@
  * @a: Pointer to the first integer.
  * @b: Pointer to the second integer.
  **/
-Void swap_integers(int *a, int *b)
+void swap_integers(int *a, int *b)
 {
 	int temp;
-	
+
 	temp = *a;
 	*a = *b;
 	*b = temp;
-i}
-
+}
