@@ -1,5 +1,5 @@
 #ifndef SORT_H_
-#define SORT_H
+#define SORT_H_
 
 /**
  * struct listint_s - Doubly linked list node
