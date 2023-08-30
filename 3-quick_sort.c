@@ -1,15 +1,16 @@
 #include "sort.h"
 
 /**
- * swap -wap two elements in an array
+ * custom_swap -wap two elements in an array
  * @array: Array to swap elements in
- * @item1: Index of the first element to swap
- * @item2: Index of the second element to swap
+ * @index1: Index of the first element to swap
+ * @index2: Index of the second element to swap
  */
 
 void custom_swap(int *array, ssize_t index1, ssize_t index2)
 {
 	int temp = array[index1];
+
 	array[index1] = array[index2];
 	array[index2] = temp;
 }
@@ -25,33 +26,33 @@ void custom_swap(int *array, ssize_t index1, ssize_t index2)
 
 int lomuto_partition(int *array, ssize_t low, ssize_t high, size_t size)
 {
-    int pivot = array[high];
-    ssize_t i = low - 1;
+	int pivot = array[high];
+	ssize_t i = low - 1;
 
-    for (ssize_t j = low; j <= high - 1; j++)
-    {
-        if (array[j] < pivot)
-        {
-            i++;
-            if (i != j)
-            {
-                custom_swap(array, i, j);
-                print_array(array, size);
-            }
-        }
-    }
+	for (ssize_t j = low; j <= high - 1; j++)
+	{
+		if (array[j] < pivot)
+		{
+			i++;
+			if (i != j)
+			{
+				custom_swap(array, i, j);
+				print_array(array, size);
+			}
+		}
+	}
 
-    if (array[i + 1] != array[high])
-    {
-        custom_swap(array, i + 1, high);
-        print_array(array, size);
-    }
+	if (array[i + 1] != array[high])
+	{
+		custom_swap(array, i + 1, high);
+		print_array(array, size);
+	}
 
-    return (i + 1);
+	return (i + 1);
 }
 
 /**
- * qs - Recursive Quick sort algorithm
+ * custom_quick_sort - Recursive Quick sort algorithm
  * @array: Array to be sorted
  * @low: Index of the first element
  * @high: Index of the last element
