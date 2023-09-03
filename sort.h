@@ -38,5 +38,8 @@ void bitonic_sort(int *array, size_t size);
 void quick_sort_hoare(int *array, size_t size);
 /*void sort_deck(deck_node_t **deck);*/
 void swap_nodes(listint_t **list, listint_t *node1, listint_t *node2);
+void custom_swap(int *array, ssize_t index1, ssize_t index2);
+int lomuto_partition(int *array, ssize_t low, ssize_t high, size_t size);
+void custom_quick_sort(int *array, ssize_t low, ssize_t high, size_t size);
 
 #endif
