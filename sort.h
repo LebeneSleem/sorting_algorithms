@@ -41,5 +41,10 @@ void swap_nodes(listint_t **list, listint_t *node1, listint_t *node2);
 void custom_swap(int *array, ssize_t index1, ssize_t index2);
 int lomuto_partition(int *array, ssize_t low, ssize_t high, size_t size);
 void custom_quick_sort(int *array, ssize_t low, ssize_t high, size_t size);
+int get_max(int *array, int size);
+void merge_subarr(int *subarr, int *buff, size_t front, size_t mid,
+		size_t back);
+void merge_sort_recursive(int *subarr, int *buff, size_t front, size_t back);
+void merge_sort(int *array, size_t size);
 
 #endif
